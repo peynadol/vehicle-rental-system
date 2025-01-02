@@ -14,10 +14,11 @@ class Vehicle:
             print(f"This {self.model} is already unavailable.")
 
     def return_vehicle(self):
-        pass
-
-    def maintenance_check(self):
-        pass
+        if not self.availablity:
+            self.availablity = True
+            print(f"This {self.model} is now checked in and available")
+        else:
+            print(f"This {self.model} is already checked in.")
 
 
 class Car(Vehicle):
